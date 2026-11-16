@@ -1,0 +1,8 @@
+---
+permalink: assets/js/posts-data.js
+eleventyExcludeFromCollections: true
+---
+/* Generated at build time from src/posts. Do not edit; edit the posts.
+   url is relative to the site root. */
+const HCS_POSTS = {{ collections.posts | postsJson | safe }};
+const HCS_PAGE_COUNT = {{ collections.posts.length + 3 }};

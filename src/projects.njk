@@ -1,0 +1,48 @@
+---
+layout: base.njk
+nav: projects
+title: "Projects / Build Logs"
+description: "Build logs: hardware, software, web and hosting, 3D prints, and lab projects."
+permalink: projects.html
+---
+  <main id="main">
+    <div class="wrap">
+
+      <header class="page-head">
+        <h1 class="page-head__title"><span class="gt" aria-hidden="true">&gt;</span>Projects / Build Logs</h1>
+        <p class="page-head__lede">Builds, experiments, tools, and the occasional rabbit hole.</p>
+      </header>
+
+      <section class="section" aria-label="Build logs">
+        <ul class="chips" aria-label="Filter by tag">
+          <li><a class="chip chip--all" href="projects.html" data-filter="all" aria-current="true">All</a></li>
+          <li><a class="chip tag--hw" href="projects.html?tag=hw" data-filter="hw"><span class="tag tag--hw">[HW]</span> Hardware</a></li>
+          <li><a class="chip tag--sw" href="projects.html?tag=sw" data-filter="sw"><span class="tag tag--sw">[SW]</span> Software</a></li>
+          <li><a class="chip tag--web" href="projects.html?tag=web" data-filter="web"><span class="tag tag--web">[WEB]</span> Web/Hosting</a></li>
+          <li><a class="chip tag--3d" href="projects.html?tag=3d" data-filter="3d"><span class="tag tag--3d">[3D]</span> 3D Print</a></li>
+          <li><a class="chip tag--lab" href="projects.html?tag=lab" data-filter="lab"><span class="tag tag--lab">[LAB]</span> Lab/Misc</a></li>
+        </ul>
+
+        <p class="list-status" data-filter-status aria-live="polite">{{ collections.posts | length }} logs</p>
+
+        <ul class="builds" data-filter-list>
+{% set posts = collections.posts %}{% include "builds.njk" %}
+        </ul>
+        <p class="list-empty" data-filter-empty hidden>Nothing filed under this tag yet.</p>
+      </section>
+
+      <section class="section" aria-labelledby="legend-title">
+        <div class="section__head">
+          <h2 class="section__title" id="legend-title"><span class="gt" aria-hidden="true">&gt;</span>Tags</h2>
+        </div>
+        <ul class="legend">
+          <li><span class="tag tag--hw">[HW]</span> <span>Boards, firmware, and anything with pins.</span></li>
+          <li><span class="tag tag--sw">[SW]</span> <span>One-off tools and custom software.</span></li>
+          <li><span class="tag tag--web">[WEB]</span> <span>Websites, hosting, and the infrastructure under them.</span></li>
+          <li><span class="tag tag--3d">[3D]</span> <span>Functional prints: enclosures, brackets, jigs.</span></li>
+          <li><span class="tag tag--lab">[LAB]</span> <span>Home lab, automation, and things that fit nowhere else.</span></li>
+        </ul>
+      </section>
+
+    </div>
+  </main>

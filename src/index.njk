@@ -1,0 +1,100 @@
+---
+layout: base.njk
+nav: home
+description: "Travis Haley. Software, electronics, web apps, custom tools, 3D prints, and home lab. Build logs and a place to reach me."
+permalink: index.html
+---
+  <main id="main">
+    <div class="wrap">
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__text">
+          <h1 class="hero__title" id="hero-title"><span class="gt" aria-hidden="true">&gt;</span>I build practical things.<span class="cursor" aria-hidden="true"></span></h1>
+          <p class="hero__intro">Software, electronics, web apps, custom tools, 3D prints, home lab, and the glue that ties it all together.</p>
+          <ul class="prompt-list">
+            <li><span class="prompt-list__bullet" aria-hidden="true">&gt;_</span>code it</li>
+            <li><span class="prompt-list__bullet" aria-hidden="true">&gt;_</span>build it</li>
+            <li><span class="prompt-list__bullet" aria-hidden="true">&gt;_</span>print it</li>
+            <li><span class="prompt-list__bullet" aria-hidden="true">&gt;_</span>host it</li>
+            <li><span class="prompt-list__bullet" aria-hidden="true">&gt;_</span>automate it</li>
+          </ul>
+        </div>
+
+        <!-- The computer. A real button; the text on its screen is decoration.
+             The lines come from SCREEN_LINES in assets/js/terminal.js. -->
+        <button class="computer" type="button" data-open-terminal aria-label="Open terminal" aria-haspopup="dialog">
+          <span class="computer__monitor">
+            <span class="computer__screen" data-screen aria-hidden="true"><span class="tl"><span class="screen__prompt-mark">&gt; </span><span class="cursor"></span></span></span>
+            <span class="computer__chin" aria-hidden="true">
+              <svg class="computer__badge" viewBox="4 2 56 60" focusable="false">
+                <path class="logo__ink" d="M12.5 17h7v30h-7z M44.5 17h7v30h-7z M16 28.5h32v7H16z"/>
+                <path class="logo__pads" d="M8 5h16v16H8z M40 13a8 8 0 1 1 16 0a8 8 0 1 1-16 0z M8 51a8 8 0 1 1 16 0a8 8 0 1 1-16 0z M40 51a8 8 0 1 1 16 0a8 8 0 1 1-16 0z M13 13a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M45 13a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M13 51a3 3 0 1 0 6 0a3 3 0 1 0-6 0z M45 51a3 3 0 1 0 6 0a3 3 0 1 0-6 0z"/>
+              </svg>
+              <span class="computer__vents"><span></span><span></span><span></span><span></span></span>
+            </span>
+          </span>
+          <span class="computer__neck" aria-hidden="true"></span>
+          <span class="computer__foot" aria-hidden="true"></span>
+        </button>
+      </section>
+
+      <nav class="disciplines" aria-label="Projects by discipline">
+        <a class="discipline" href="projects.html?tag=hw">
+          <svg class="discipline__icon icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 7h10v10H7z M10 3v4 M14 3v4 M10 17v4 M14 17v4 M3 10h4 M3 14h4 M17 10h4 M17 14h4"/></svg>
+          <span>Electronics<br> &amp; Embedded</span>
+          <span class="discipline__go" aria-hidden="true">&gt;</span>
+        </a>
+        <a class="discipline" href="projects.html?tag=sw">
+          <svg class="discipline__icon icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 7l-5 5 5 5 M16 7l5 5-5 5 M14 4l-4 16"/></svg>
+          <span>Custom<br> Software</span>
+          <span class="discipline__go" aria-hidden="true">&gt;</span>
+        </a>
+        <a class="discipline" href="projects.html?tag=web">
+          <svg class="discipline__icon icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v6H4z M4 13h16v6H4z M7.5 8h.01 M7.5 16h.01 M11 8h6 M11 16h6"/></svg>
+          <span>Web &amp;<br> Hosting</span>
+          <span class="discipline__go" aria-hidden="true">&gt;</span>
+        </a>
+        <a class="discipline" href="projects.html?tag=3d">
+          <svg class="discipline__icon icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z M12 12l8-4.5 M12 12L4 7.5 M12 12v9"/></svg>
+          <span>3D Printing<br> &amp; Design</span>
+          <span class="discipline__go" aria-hidden="true">&gt;</span>
+        </a>
+        <a class="discipline" href="projects.html?tag=lab">
+          <svg class="discipline__icon icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Automation<br> &amp; Home Lab</span>
+          <span class="discipline__go" aria-hidden="true">&gt;</span>
+        </a>
+      </nav>
+
+      <section class="section" aria-labelledby="recent-title">
+        <div class="section__head">
+          <h2 class="section__title" id="recent-title"><span class="gt" aria-hidden="true">&gt;</span>Recent Builds</h2>
+          <a class="section__more" href="projects.html">View all projects -&gt;</a>
+        </div>
+        <ul class="builds">
+{% set posts = collections.posts | head(5) %}{% include "builds.njk" %}
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="about-title">
+        <div class="section__head">
+          <h2 class="section__title" id="about-title"><span class="gt" aria-hidden="true">&gt;</span>What this is</h2>
+        </div>
+        <div class="notes">
+          <div class="note">
+            <h3 class="note__title">Build logs</h3>
+            <p>I write up what I make: what it is, how it went together, and what I would change. New ones show up when something is finished enough to photograph.</p>
+          </div>
+          <div class="note">
+            <h3 class="note__title">Side work</h3>
+            <p>I take on occasional projects outside my day job as a software engineer. The <a href="contact.html">contact page</a> says what kind.</p>
+          </div>
+          <div class="note">
+            <h3 class="note__title">The computer up there</h3>
+            <p>It opens a terminal. So does the backtick key, on any page. It does not do much yet.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>

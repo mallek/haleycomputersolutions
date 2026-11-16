@@ -1,0 +1,18 @@
+{
+  "name": "haleycomputersolutions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Haley Computer Solutions website.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mallek/haleycomputersolutions.git"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.8"
+  }
+}

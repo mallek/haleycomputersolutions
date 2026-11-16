@@ -1,0 +1,77 @@
+---
+layout: base.njk
+---
+  <main id="main">
+    {#- One post = one markdown file in src/posts. Front matter fills the head and the
+        sidebar. The markdown body lands in .prose. See README.md for the fields. -#}
+    <article class="wrap post">
+
+      <header class="post__head">
+        <a class="post__back" href="{{ root }}projects.html">&lt; Back to Projects</a>
+        <h1 class="post__title">{{ title }}</h1>
+        <ul class="chips" aria-label="Tags">
+          {%- for tag in tags %}
+          <li><a class="chip tag--{{ tag }}" href="{{ root }}projects.html?tag={{ tag }}"><span class="tag tag--{{ tag }}">[{{ tag | upper }}]</span> {{ tagNames[tag] }}</a></li>
+          {%- endfor %}
+          {%- for chip in chips %}
+          <li><span class="chip">{{ chip }}</span></li>
+          {%- endfor %}
+        </ul>
+        <p class="post__meta"><time datetime="{{ page.date | isoDate }}">{{ page.date | niceDate }}</time>{% if read %} · {{ read }}{% endif %}</p>
+
+        {%- if lead %}
+        <figure class="figure post__lead">
+          {%- if lead.src %}
+          <div class="shot shot--lead"><img src="{{ root }}{{ lead.src }}" alt="{{ lead.alt }}"></div>
+          {%- else %}
+          <div class="shot shot--lead shot--placeholder">
+            <span class="shot__label">PHOTO PLACEHOLDER<br>{{ lead.placeholder | safe }}</span>
+          </div>
+          {%- endif %}
+          {%- if lead.caption %}
+          <figcaption class="figure__caption">{{ lead.caption | safe }}</figcaption>
+          {%- endif %}
+        </figure>
+        {%- endif %}
+      </header>
+
+      {#- Sidebar. Sits at right on desktop, moves above the body on phone. -#}
+      <aside class="post__side" aria-label="Project details">
+        {%- if specs %}
+        <section>
+          <h2 class="side__title">Specs</h2>
+          <dl class="side__specs">
+            {%- for spec in specs %}
+            <dt>{{ spec[0] }}</dt><dd>{{ spec[1] | safe }}</dd>
+            {%- endfor %}
+          </dl>
+        </section>
+        {%- endif %}
+        {%- if parts %}
+        <section>
+          <h2 class="side__title">Parts</h2>
+          <ul class="side__list">
+            {%- for part in parts %}
+            <li>{{ part | safe }}</li>
+            {%- endfor %}
+          </ul>
+        </section>
+        {%- endif %}
+        {%- if files %}
+        <section>
+          <h2 class="side__title">Files</h2>
+          <ul class="side__list">
+            {%- for file in files %}
+            <li>{{ file | safe }}</li>
+            {%- endfor %}
+          </ul>
+        </section>
+        {%- endif %}
+      </aside>
+
+      <div class="post__body prose">
+{{ content | safe }}
+      </div>
+
+    </article>
+  </main>

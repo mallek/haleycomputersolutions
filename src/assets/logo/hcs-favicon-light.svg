@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128" role="img" aria-label="HCS">
+  <title>HCS</title>
+  <path fill="#0D1117" d="M12.5 17h7v30h-7z M44.5 17h7v30h-7z M16 28.5h32v7H16z"/>
+  <path fill="#8A5B00" d="M8 5h16v16H8z M40 13a8 8 0 1 1 16 0a8 8 0 1 1-16 0z M8 51a8 8 0 1 1 16 0a8 8 0 1 1-16 0z M40 51a8 8 0 1 1 16 0a8 8 0 1 1-16 0z"/>
+</svg>

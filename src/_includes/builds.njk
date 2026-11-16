@@ -1,0 +1,18 @@
+{#- One row per build log. Expects `posts` (a list of collection items) to be set by the caller. -#}
+{%- for post in posts %}
+          <li class="build" data-tags="{{ post.data.tags | join(' ') }}">
+            <a class="build__link" href="{{ root }}{{ post.url | stripSlash }}">
+              {%- if post.data.thumb == "placeholder" %}
+              <span class="build__thumb shot shot--placeholder"><span class="shot__label">photo 3:2</span></span>
+              {%- elif post.data.thumb %}
+              <span class="build__thumb shot"><img src="{{ root }}{{ post.data.thumb }}" alt="" loading="lazy"></span>
+              {%- else %}
+              <span class="build__thumb build__thumb--none" aria-hidden="true"><span class="tag tag--{{ post.data.tags | first }}">[{{ post.data.tags | first | upper }}]</span></span>
+              {%- endif %}
+              <span class="build__title">{{ post.data.title }}</span>
+              <span class="build__desc">{{ post.data.description }}</span>
+              <span class="build__tags">{% for tag in post.data.tags %}<span class="tag tag--{{ tag }}">[{{ tag | upper }}]</span>{% if not loop.last %} {% endif %}{% endfor %}</span>
+              <time class="build__date" datetime="{{ post.date | isoDate }}">{{ post.date | niceDate }}</time>
+            </a>
+          </li>
+{%- endfor %}
